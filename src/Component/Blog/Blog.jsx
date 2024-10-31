@@ -7,7 +7,7 @@ const Blog = ({blog,bookmarkHandel}) => {
     const {title,cover,author_img,author,reading_time,posted_date,hashtags}=blog;
     return (
         <div>
-            <img className='w-full' src={cover} alt="" />
+            <img className='w-full h-[250px]' src={cover} alt="" />
             <div className='flex justify-between items-center'>
                 <div className='flex justify-start items-center'>
                     <img className='w-16 h-16 rounded-full' src={author_img} alt="" />
@@ -21,7 +21,7 @@ const Blog = ({blog,bookmarkHandel}) => {
                 </div>
                 <div>
                     <h4>{reading_time} min red 
-                        <button onClick={bookmarkHandel}><FaRegBookmark></FaRegBookmark> </button>
+                        <button onClick={()=>bookmarkHandel(blog)}><FaRegBookmark></FaRegBookmark> </button>
                     </h4>
 
                 </div>
