@@ -3,7 +3,7 @@ import { useState } from "react";
 import Blog from "../Blog/Blog";
 
 
-const Blogs = () => {
+const Blogs = ({bookmarkHandel}) => {
 
 
     const [blogs,setblogs]=useState([]);
@@ -20,7 +20,7 @@ const Blogs = () => {
         <div className="md:w-2/3">
             <h1>Blog :{blogs.length} </h1>
             {
-                blogs.map(blog=><Blog blog={blog} key={blog.id}> </Blog>)
+                blogs.map(blog=><Blog bookmarkHandel={bookmarkHandel} blog={blog} key={blog.id}> </Blog>)
             }
             
         </div>
